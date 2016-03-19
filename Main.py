@@ -72,10 +72,10 @@ player_group.add(player)
 player_group.draw(main_screen)
 main_screen.blit(surface_for_UI,(0,0))
 pygame.display.flip()
-
-trap=Traps("trap","images/bear-trap1.bmp")
-trap.set_pos(0,0)
-traps_group.add(trap)
+for i in range(5):
+    trap=Traps("trap","iconplus1.jpg")
+    trap.set_pos(random.randint(240,1240),0)
+    traps_group.add(trap)
 
 while True:
     traps_group.draw(main_screen)
